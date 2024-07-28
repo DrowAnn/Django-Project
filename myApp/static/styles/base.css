@@ -1,0 +1,40 @@
+body {
+  background-color: #202020;
+  color: whitesmoke;
+}
+
+nav {
+  background-color: #404040;
+  padding: 0.5vh 8vw;
+  padding-right: 12vw;
+}
+
+nav ol {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ol li {
+  list-style: none;
+}
+
+nav ol li a {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 0.6vh 0.6vw;
+  border-radius: 5px;
+}
+
+nav ol li a:hover {
+  background-color: rgb(170, 32, 235);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0vh 10vw;
+}
+
+.title {
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+{% extends 'layouts/basicTemplate.html' %} {% block content %}
+
+<h1 class="title">Projects</h1>
+
+<ul>
+  {% for project in projects %}
+
+  <li>
+    {{ project.name }}
+    <ol>
+      {% for task in tasks %} {% if task.project.id == project.id %}
+      <li>{{ task.name }}</li>
+      {% endif %} {% endfor %}
+    </ol>
+  </li>
+  <br />
+
+  {% endfor %}
+</ul>
+
+{% endblock %}

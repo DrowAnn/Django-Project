@@ -1,0 +1,29 @@
+{% extends 'layouts/basicTemplate.html' %} {% block content %}
+
+<h1 class="title">Tasks</h1>
+
+<ul>
+  {% for task in tasks %}
+
+  <li>
+    {{ task.name }}
+    <ul>
+      <li>{{ task.description }}</li>
+      <li>Project: {{ task.project.id }} - {{ task.project.name }}</li>
+      {% if task.done == False %}
+      <li>Pendiente 🕑</li>
+      {% else %}
+      <li>Realizada ✅</li>
+      {% endif %}
+      <form method="post">
+        {% csrf_token %}
+        <button>Done</button>
+      </form>
+    </ul>
+  </li>
+  <br />
+
+  {% endfor %}
+</ul>
+
+{% endblock %}
